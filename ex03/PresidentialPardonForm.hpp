@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 14:34:04 by deryacar          #+#    #+#             */
-/*   Updated: 2024/12/24 15:15:42 by deryacar         ###   ########.fr       */
+/*   Created: 2024/12/24 14:33:53 by deryacar          #+#    #+#             */
+/*   Updated: 2024/12/24 15:58:53 by deryacar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#pragma once 
 
 #include "AForm.hpp"
-#include <fstream>
 
-class ShrubberyCreationForm : public AForm{
+class PresidentialPardonForm : public AForm{
     private:
         std::string target;
     public:
-        ShrubberyCreationForm();
-        ShrubberyCreationForm(const std::string &target);
-        ~ShrubberyCreationForm();
-        ShrubberyCreationForm(const ShrubberyCreationForm &copy);
-        ShrubberyCreationForm &operator=(const ShrubberyCreationForm &copy);
+        PresidentialPardonForm();
+        ~PresidentialPardonForm();
+        PresidentialPardonForm(const std::string &target);
+        PresidentialPardonForm(const PresidentialPardonForm &copy);
+        PresidentialPardonForm &operator=(const PresidentialPardonForm &copy);
         virtual void specificExecute()const;
 };

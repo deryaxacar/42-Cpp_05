@@ -6,7 +6,7 @@
 /*   By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:43:29 by deryacar          #+#    #+#             */
-/*   Updated: 2024/12/18 12:44:05 by deryacar         ###   ########.fr       */
+/*   Updated: 2024/12/24 12:56:18 by deryacar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ class Bureaucrat {
     private:
         const std::string _name;
         size_t _grade;
-        void setGrade(int n);
     public:
         Bureaucrat(void);
         ~Bureaucrat(void);
@@ -29,6 +28,7 @@ class Bureaucrat {
 
         std::string getName(void) const;
         size_t getGrade(void) const;
+        void setGrade(int n);
 
         void increaseGrade(void);
         void decreaseGrade(void);

@@ -5,23 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 15:44:45 by deryacar          #+#    #+#             */
-/*   Updated: 2024/12/18 15:44:49 by deryacar         ###   ########.fr       */
+/*   Created: 2024/12/24 14:33:53 by deryacar          #+#    #+#             */
+/*   Updated: 2024/12/24 15:13:41 by deryacar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#pragma once 
 
 #include "AForm.hpp"
 
-class PresidentialPardonForm : public AForm {
+class PresidentialPardonForm : public AForm{
     private:
-        std::string _target;
+        std::string target;
     public:
-        PresidentialPardonForm(void);
-        PresidentialPardonForm(std::string target);
-        PresidentialPardonForm(const PresidentialPardonForm& copy);
-        ~PresidentialPardonForm(void);
-        PresidentialPardonForm &operator=(const PresidentialPardonForm& copy);
-        void specificExecute(void) const;
+        PresidentialPardonForm();
+        ~PresidentialPardonForm();
+        PresidentialPardonForm(const std::string &target);
+        PresidentialPardonForm(const PresidentialPardonForm &copy);
+        PresidentialPardonForm &operator=(const PresidentialPardonForm &copy);
+        virtual void specificExecute()const;
 };

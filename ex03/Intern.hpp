@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 14:34:04 by deryacar          #+#    #+#             */
-/*   Updated: 2024/12/24 15:15:42 by deryacar         ###   ########.fr       */
+/*   Created: 2024/12/24 15:57:28 by deryacar          #+#    #+#             */
+/*   Updated: 2024/12/24 15:59:05 by deryacar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "AForm.hpp"
-#include <fstream>
 
-class ShrubberyCreationForm : public AForm{
-    private:
-        std::string target;
+class Intern{
     public:
-        ShrubberyCreationForm();
-        ShrubberyCreationForm(const std::string &target);
-        ~ShrubberyCreationForm();
-        ShrubberyCreationForm(const ShrubberyCreationForm &copy);
-        ShrubberyCreationForm &operator=(const ShrubberyCreationForm &copy);
-        virtual void specificExecute()const;
+        Intern();
+        ~Intern();
+        Intern(const Intern &copy);
+        Intern &operator=(const Intern &copy);
+        AForm* makeForm(std::string name, std::string target);
+
 };

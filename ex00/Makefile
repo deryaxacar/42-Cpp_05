@@ -6,7 +6,7 @@
 #    By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/18 11:57:13 by deryacar          #+#    #+#              #
-#    Updated: 2024/12/18 11:59:08 by deryacar         ###   ########.fr        #
+#    Updated: 2024/12/24 16:00:14 by deryacar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,9 @@ $(NAME): $(OBJ)
 clean:
 	@$(RM) $(OBJ) $(NAME)
 	@echo "\033[0;34mclean\033[m"
+
+%.o: %.cpp
+	@$(CC) $(CPPFLAGS) -c $< -o $@
 
 fclean: clean
 	@$(RM) $(NAME)

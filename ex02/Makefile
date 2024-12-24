@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/18 11:57:13 by deryacar          #+#    #+#              #
-#    Updated: 2024/12/18 15:43:43 by deryacar         ###   ########.fr        #
+#    Created: 2024/12/24 14:33:47 by deryacar          #+#    #+#              #
+#    Updated: 2024/12/24 15:45:28 by deryacar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRC = main.cpp AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Bureaucrat
+NAME = AForm
 
 all: $(NAME)
 
@@ -27,6 +27,9 @@ $(NAME): $(OBJ)
 clean:
 	@$(RM) $(OBJ) $(NAME)
 	@echo "\033[0;34mclean\033[m"
+
+%.o: %.cpp
+	@$(CC) $(CPPFLAGS) -c $< -o $@
 
 fclean: clean
 	@$(RM) $(NAME)

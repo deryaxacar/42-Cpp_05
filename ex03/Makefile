@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: deryacar <deryacar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/18 11:57:13 by deryacar          #+#    #+#              #
-#    Updated: 2024/12/24 16:00:07 by deryacar         ###   ########.fr        #
+#    Created: 2024/12/24 14:33:47 by deryacar          #+#    #+#              #
+#    Updated: 2024/12/24 16:00:45 by deryacar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp AForm.cpp Bureaucrat.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Bureaucrat
+NAME = Intern
 
 all: $(NAME)
 
