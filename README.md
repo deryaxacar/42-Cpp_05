@@ -21,16 +21,17 @@ C++ dilinde nesne yönelimli programlama (OOP) yaklaşımını istisnalar (excep
 
 C++’ta hatalı durumları yönetmek için `try`, `throw` ve `catch` blokları kullanılır:
 
-**Exception (İstisna) Nedir?**
-
-C++’ta exception (istisna), program çalışırken beklenmeyen veya olağan dışı bir durumla karşılaşıldığında (örneğin geçersiz girdi, belli bir sınıra ulaşma, kaynak yetersizliği vb.) akışın kesilerek bu hatanın özel bir şekilde ele alınmasını sağlayan mekanizmadır. Bu sayede normal akış içinde hataların takibi yerine, hatalı durumlar ayrı bir blokta yönetilir ve kodun temizliği korunur.
-
 - **try**
   - Hata oluşturma ihtimali olan kodlar burada yer alır.
 - **throw**
   - Hatalı bir durum tespit edildiğinde, `throw` ile bir istisna fırlatılır.
 - **catch**
   - `throw` ile fırlatılan istisna, uygun türdeki `catch` bloklarında yakalanır ve işlenir.
+
+**Exception (İstisna) Nedir?**
+
+C++’ta exception (istisna), program çalışırken beklenmeyen veya olağan dışı bir durumla karşılaşıldığında (örneğin geçersiz girdi, belli bir sınıra ulaşma, kaynak yetersizliği vb.) akışın kesilerek bu hatanın özel bir şekilde ele alınmasını sağlayan mekanizmadır. Bu sayede normal akış içinde hataların takibi yerine, hatalı durumlar ayrı bir blokta yönetilir ve kodun temizliği korunur.
+
 
 ```cpp
 try {
