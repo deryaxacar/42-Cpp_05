@@ -1,6 +1,5 @@
 <div align="center">
   <h1>C++ Module 05</h1> <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ Logo" width="65"></br></br>
-
 </div>
 <p align="center">
 C++ dilinde nesne yönelimli programlama (OOP) yaklaşımını istisnalar (exceptions) ve farklı senaryolar üzerinden derinlemesine işlemektedir. Projede; bürokratik hiyerarşi ve formlar teması kullanılarak, sınıflar arasında kalıtım, soyut sınıflar (abstract class), çok biçimlilik (polymorphism), istisnaların kullanımı ve hata yakalama mekanizmaları gösterilmektedir.
@@ -8,16 +7,29 @@ C++ dilinde nesne yönelimli programlama (OOP) yaklaşımını istisnalar (excep
 
 
 ### İçindekiler 📚
-- [Try, Throw ve Exception Kullanımı](#try-throw-ve-exception-kullanımı)
+
 - [Ex00 - Bureaucrat](#ex00-bureaucrat)
+  - [Try, Throw ve Exception Kullanımı](#try-throw-ve-exception-kullanımı)
 - [Ex01 - Form](#ex01-form)
 - [Ex02 - AForm ve Alt Sınıfları](#ex02-aform-ve-alt-siniflari)
 - [Ex03 - Intern](#ex03-intern)
 
 ---
 
+<a name="ex00-bureaucrat"></a>
+<div align="center">
+  <h2>Ex00 - Bureaucrat</h2>
+</div>
+
+- Sabit bir `name` ve 1 ile 150 arasında olabilecek bir `grade` üyesi bulunur.
+- `grade` aralığı geçersiz olduğunda istisna fırlatır (GradeTooHighException, GradeTooLowException).
+- Derece yükseltme ve düşürme fonksiyonları da aynı şekilde geçersiz sınırda istisna yakalamayı öğretir.
+- `operator<<` aşırı yüklenerek, bürokratın bilgilerini yazdırmayı sağlar.
+
 <a name="try-throw-ve-exception-kullanımı"></a>
-### Try, Throw ve Exception Kullanımı
+<div align="center">
+  <h3>Try, Throw ve Exception Kullanımı</h3>
+</div>
 
 C++’ta hatalı durumları yönetmek için `try`, `throw` ve `catch` blokları kullanılır:
 
@@ -49,15 +61,6 @@ try {
 
 Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha temiz, anlaşılır hale gelir. Özellikle throw ve catch mekanizması kullanarak hataları türlerine göre (örneğin `GradeTooHighException`, `GradeTooLowException`) farklı şekillerde ele alabilirsiniz.
 
----
-
-<a name="ex00-bureaucrat"></a>
-### Ex00 - Bureaucrat
-
-- Sabit bir `name` ve 1 ile 150 arasında olabilecek bir `grade` üyesi bulunur.
-- `grade` aralığı geçersiz olduğunda istisna fırlatır (GradeTooHighException, GradeTooLowException).
-- Derece yükseltme ve düşürme fonksiyonları da aynı şekilde geçersiz sınırda istisna yakalamayı öğretir.
-- `operator<<` aşırı yüklenerek, bürokratın bilgilerini yazdırmayı sağlar.
 
 ---
 
