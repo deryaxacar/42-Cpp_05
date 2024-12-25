@@ -65,7 +65,9 @@ Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha tem
 ---
 
 <a name="ex01-form"></a>
-### Ex01 - Form
+<div align="center">
+  <h2>Ex01 - Form</h2>
+</div>
 
 - Form, ad (name), imzalanma durumu (signed), imza için gereken derece (grade to sign) ve uygulama için gereken derece (grade to execute) gibi sabit ve/veya özel alanlara sahiptir.
 - Form’un imzalanması için gerekli grade sağlanmadığında istisna fırlatır (Form::GradeTooHighException, Form::GradeTooLowException).
@@ -74,7 +76,9 @@ Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha tem
 ---
 
 <a name="ex02-aform-ve-alt-siniflari"></a>
-### Ex02 - AForm ve Alt Sınıfları
+<div align="center">
+  <h2>Ex02 - AForm ve Alt Sınıfları</h2>
+</div>
 
 - `Form` soyut sınıfa (AForm) dönüştürülür; artık nesne oluşturulamaz fakat kalıtım için temel görevi görür.
 - `ShrubberyCreationForm`, `RobotomyRequestForm`, `PresidentialPardonForm` gibi somut sınıflar, AForm’dan türetilir ve kendi özel işlemlerini (`execute()`) uygular.
@@ -83,7 +87,9 @@ Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha tem
 ---
 
 <a name="ex03-intern"></a>
-### Ex03 - Intern
+<div align="center">
+  <h2>Ex03 - Intern</h2>
+</div>
 
 - `Intern` sınıfı, form oluşturma işini (makeForm) üstlenir.
 - Parametre olarak aldığı form ismi ve hedef (target) bilgisini kullanarak doğru formu döndürür. Yanlış form ismi gelirse uyarı verir.
