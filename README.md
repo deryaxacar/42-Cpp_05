@@ -8,10 +8,45 @@ C++ dilinde nesne yönelimli programlama (OOP) yaklaşımını istisnalar (excep
 
 
 ### İçindekiler 📚
+- [Try, Throw ve Exception Kullanımı](#try-throw-ve-exception-kullanımı)
 - [Ex00 - Bureaucrat](#ex00-bureaucrat)
 - [Ex01 - Form](#ex01-form)
 - [Ex02 - AForm ve Alt Sınıfları](#ex02-aform-ve-alt-siniflari)
 - [Ex03 - Intern](#ex03-intern)
+
+---
+
+<a name="try-throw-ve-exception-kullanımı"></a>
+### Try, Throw ve Exception Kullanımı
+
+C++’ta hatalı durumları yönetmek için `try`, `throw` ve `catch` blokları kullanılır:
+
+**Exception (İstisna) Nedir?**
+
+C++’ta exception (istisna), program çalışırken beklenmeyen veya olağan dışı bir durumla karşılaşıldığında (örneğin geçersiz girdi, belli bir sınıra ulaşma, kaynak yetersizliği vb.) akışın kesilerek bu hatanın özel bir şekilde ele alınmasını sağlayan mekanizmadır. Bu sayede normal akış içinde hataların takibi yerine, hatalı durumlar ayrı bir blokta yönetilir ve kodun temizliği korunur.
+
+- **try**
+  - Hata oluşturma ihtimali olan kodlar burada yer alır.
+- **throw**
+  - Hatalı bir durum tespit edildiğinde, `throw` ile bir istisna fırlatılır.
+- **catch**
+  - `throw` ile fırlatılan istisna, uygun türdeki `catch` bloklarında yakalanır ve işlenir.
+
+```cpp
+try {
+    // Hata oluşturabilecek kod
+    if (someCondition)
+        throw std::runtime_error("Bir hata oluştu!");
+    // ...
+} catch (const std::runtime_error& e) {
+    std::cerr << "Hata mesajı: " << e.what() << std::endl;
+} catch (...) {
+    std::cerr << "Bilinmeyen bir hata oluştu!" << std::endl;
+}
+
+```
+
+Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha temiz, anlaşılır hale gelir. Özellikle throw ve catch mekanizması kullanarak hataları türlerine göre (örneğin `GradeTooHighException`, `GradeTooLowException`) farklı şekillerde ele alabilirsiniz.
 
 ---
 
