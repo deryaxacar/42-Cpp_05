@@ -13,6 +13,7 @@ C++ dilinde nesne yönelimli programlama (OOP) yaklaşımını istisnalar (excep
 - [Ex01 - Form](#ex01-form)
 - [Ex02 - AForm ve Alt Sınıfları](#ex02-aform-ve-alt-siniflari)
 - [Ex03 - Intern](#ex03-intern)
+  - [Switch-case Kullanımı](#switch-case-kullanımı)
 
 ---
 
@@ -97,7 +98,50 @@ Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha tem
 
 ---
 
-Bu aşamalar boyunca, C++’ın istisna mekanizması (try/catch blokları), sınıf hiyerarşisi, kurucu/destructor kuralları, fonksiyon aşırı yükleme (overloading) ve çok biçimlilik gibi temel OOP prensipleri pratik örneklerle gösterilmektedir. Kodlama adımları sonunda ise öğrencilerin, sınıflar arası etkileşimi (özellikle hata yakalama ve kontrol mekanizmalarıyla) doğru şekilde yönetmeyi öğrenmeleri hedeflenir.
+<a name="switch-case-kullanımı"></a>
+<div align="center"> 
+  <h3>Switch-case Kullanımı</h3> 
+</div>
+
+**Switch-case Kullanımı Nedir?**
+switch-case, bir değişkenin değerine göre belirlenmiş kod bloklarını seçerek çalıştırmayı sağlayan karar yapısıdır. Genellikle if-else if dizisini daha okunabilir hâle getirmek için tercih edilir. Yalnızca tam sayılar (int), karakterler (char) ve bazı derleyiciye özgü durumlarda da enum gibi türlerle kullanılabilir. Mantık olarak “değişkenin değeri neyse, ona karşılık gelen case bloğunu çalıştır” şeklinde özetlenebilir.
+Aşağıdaki örnekte, switch yapısını kullanarak farklı grade (derece) değerleri için farklı işlem yapılmasını sağlıyoruz:
+
+```cpp
+#include <iostream>
+
+int main() {
+    int grade = 2; // Bu değer, kullanıcı girişi ya da başka bir fonksiyondan gelebilir
+    
+    switch (grade) {
+        case 1:
+            std::cout << "Grade = 1 (En yüksek derece)" << std::endl;
+            // GradeTooHighException atılabilir
+            break;
+        case 150:
+            std::cout << "Grade = 150 (En düşük derece)" << std::endl;
+            // GradeTooLowException atılabilir
+            break;
+        default:
+            std::cout << "Grade = " << grade << " (Geçerli aralıkta)" << std::endl;
+            break;
+    }
+
+    return 0;
+}
+
+```
+- `switch (grade`) ile değeri grade olan değişkene bakılır.
+- `case 1` bloğu, gradein değeri `1` ise çalışır ve ardından break ile `switch` yapısından çıkılır.
+- `case 150` bloğu, gradein değeri `150` ise çalışır ve ardından break ile `switch` yapısından çıkılır.
+- `default` bloğu ise hiçbir `case` ile eşleşmeyen durumlarda devreye girer.
+
+`switch-case`, bir değere göre dallanma yapmak istediğinizde `if-else-if` yapısını sadeleştirmeye yardımcı olur. Buradaki `default` bloğu, herhangi bir `case` ile eşleşmeyen durumlar için kullanılır.
+
+
+---
+
+Bu aşamalar boyunca, C++’ın istisna mekanizması (try/catch ve switch/case blokları), sınıf hiyerarşisi, kurucu/destructor kuralları, fonksiyon aşırı yükleme (overloading) ve çok biçimlilik gibi temel OOP prensipleri pratik örneklerle gösterilmektedir. Kodlama adımları sonunda ise öğrencilerin, sınıflar arası etkileşimi (özellikle hata yakalama ve kontrol mekanizmalarıyla) doğru şekilde yönetmeyi öğrenmeleri hedeflenir.
 
 ---
 
