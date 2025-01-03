@@ -103,7 +103,8 @@ Bu mekanizma sayesinde hatalar normal akıştan ayrı yönetilir ve kod daha tem
   <h3>Switch-case Kullanımı</h3> 
 </div>
 
-**Switch-case Kullanımı Nedir?**
+**Switch-case Nedir?**
+
 switch-case, bir değişkenin değerine göre belirlenmiş kod bloklarını seçerek çalıştırmayı sağlayan karar yapısıdır. Genellikle if-else if dizisini daha okunabilir hâle getirmek için tercih edilir. Yalnızca tam sayılar (int), karakterler (char) ve bazı derleyiciye özgü durumlarda da enum gibi türlerle kullanılabilir. Mantık olarak “değişkenin değeri neyse, ona karşılık gelen case bloğunu çalıştır” şeklinde özetlenebilir.
 Aşağıdaki örnekte, switch yapısını kullanarak farklı grade (derece) değerleri için farklı işlem yapılmasını sağlıyoruz:
 
