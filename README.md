@@ -146,5 +146,5 @@ Bu aşamalar boyunca, C++’ın istisna mekanizması (try/catch ve switch/case b
 
 ---
 
-<p align="center">© 2025 This project was created by Derya ACAR.</p>
+<p align="center">2025 This project was created by Derya ACAR.</p>
 
